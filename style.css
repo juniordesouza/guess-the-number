@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: rgb(255, 77, 77);
+    --main-shadow: rgba(255, 77, 77, 0.7);
+}
+
+
+html, body{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(18, 18, 18);
+}
+
+.principal{
+    position: relative;
+    color: white;
+    width: 400px;
+    padding: 20px;
+    height: 500px;
+    border-radius: 10px;
+    border-top: 5px solid var(--main-color);
+    background: rgba(5, 5, 5, 0.5);
+    -webkit-box-shadow: 0px 0px 5px 3px var(--main-shadow);
+    box-shadow: 0px 0px 5px 3px var(--main-shadow);
+}
+
+.start-game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.start-game button{
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background: rgb(18, 18, 18);
+    padding: 10px 30px;
+    -webkit-box-shadow: 0px 0px 5px 3px var(--main-shadow); 
+    box-shadow: 0px 0px 5px 3px var(--main-shadow);
+    transition: all 0.6s;
+}
+
+.start-game button:hover{
+    color: white;
+    background: var(--main-color);
+}
+
+.game-box{
+    position: absolute;
+    visibility: hidden;
+    transition: all 0.6s;
+    z-index: 0;
+}
+
+
+.gbox-top {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.show-number{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(214, 214, 214);
+}
+
+.show-number p{
+    position: absolute;
+    color: var(--main-color);
+    font-size: 3.2rem;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.gbox-middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.gbox-middle .reveal-message{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.gbox-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.gbox-bottom .gbox-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gbox-bottom .gbox-input label{
+    background: var(--main-color);
+    padding: 10px;
+    font-size: 1.2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.gbox-bottom .gbox-input input {
+    width: 35%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left: 35px;
+    height: 47px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.gbox-bottom button{
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background: rgb(18, 18, 18);
+    padding: 15px 30px;
+    -webkit-box-shadow: 0px 0px 5px 3px var(--main-shadow); 
+    box-shadow: 0px 0px 5px 3px var(--main-shadow);
+    transition: 0.3s ease-in;
+}
+
+.gbox-bottom button:hover{
+    color: white;
+    background: var(--main-color);
+}
+
+.gbox-bottom button#restart{
+    display: none;
+}

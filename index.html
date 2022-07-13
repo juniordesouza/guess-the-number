@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main>
+        <section class="principal">
+            <div class="main-painel">
+
+                <div class="start-game" id="start-game">
+                    <button id="click-draw" onclick="start_game()"> Start Game</button>
+                </div> <!-- start-game -->
+
+                <div class="game-box" id="game-box">
+
+                    <div class="gbox-top">
+                        <div id="show-user-number" class="show-number">
+                            <p></p>
+                        </div> <!-- gbox-user-number -->
+
+                        <div id="show-drawn-number" class="show-number">
+                            <p></p>
+                        </div> <!-- gbox-top-drawn-number -->
+
+                    </div> <!-- gbox-top -->
+
+                    <div class="gbox-middle">
+                        <h2 id="message" class="reveal-message"> Can You Guess The Number? </h2>
+                    </div> <!-- gbox-middle -->
+
+                    <div class="gbox-bottom">
+                        <form action="" class="gbox-input">
+                            <label for="input-number">Your Number (1 - 6): </label>
+                            <input type="text" id="input-number" name="input-number" onblur="getNumber(this.value)" id="input-number"> 
+                        </form> <!-- gbox-input -->
+
+                        <button id="action" onclick="action()">Guess now!</button>
+
+                        <button id="restart" onclick="restart()">Restart!</button>
+
+                    </div> <!-- gbox-bottom -->
+
+                </div> <!-- game-box -->
+            </div> <!-- main-painel -->
+        </section> <!-- root -->
+    </main>
+
+    <!-- main-JS -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
